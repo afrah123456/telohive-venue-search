@@ -158,6 +158,24 @@ PostgreSQL native arrays allow clean filtering with the ANY operator without a j
 
 ---
 
+## Design Flexibility
+
+The system is intentionally designed to be extended without major rewrites.
+
+**JSONB for venue attributes** - any new operational attribute (stage size, outdoor capacity, AV specs) can be added without a schema migration. It just goes into the attributes field.
+
+**Service layer separation** - search logic lives in `services/search.py`, not in the router. Swapping keyword scoring for vector embeddings or a more sophisticated ranking algorithm means changing one file, not touching the API layer.
+
+**Scoring function is isolated** - `score_venue()` is a standalone function. It can be replaced with pgvector cosine similarity, a learned ranking model, or any other approach without changing how results are returned.
+
+**LLM is swappable** - the Groq call is isolated in `generate_match_explanation()`. Switching to OpenAI, Anthropic, or any other provider is a one-line change.
+
+**Lead capture is decoupled** - leads are stored independently from venues. Extending them to track session context, link to search results, or trigger webhooks requires no changes to venue logic.
+
+**ARRAY for tags and amenities** -  new tag types and amenity categories can be added without schema changes. The ANY operator makes filtering clean and efficient.
+
+---
+
 ## Known Limitations
 
 - No authentication - any client can create, update, or delete venues
