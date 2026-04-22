@@ -1,6 +1,6 @@
 ﻿# TeloHive Venue Search API
 
-A backend service for AI-native venue matching and discovery. Users describe what they're looking for in plain English — the system filters, ranks, and explains why each venue matched.
+A backend service for AI-native venue matching and discovery. Users describe what they're looking for in plain English the system filters, ranks, and explains why each venue matched.
 
 Built as a take-home assessment for TeloHive (Task 1: AI Venue Search Backend).
 
@@ -8,7 +8,7 @@ Built as a take-home assessment for TeloHive (Task 1: AI Venue Search Backend).
 
 ## Problem Summary
 
-Booking venues today is slow and manual — spreadsheets, back-and-forth emails, and generic search results. This service makes venue discovery feel intelligent. A user describes their event in plain English and gets back a ranked list of venues with a clear explanation of why each one fits.
+Booking venues today is slow and manual spreadsheets, back-and-forth emails, and generic search results. This service makes venue discovery feel intelligent. A user describes their event in plain English and gets back a ranked list of venues with a clear explanation of why each one fits.
 
 The core challenge is handling both hard constraints (capacity, budget, city) and fuzzy intent ("startup mixer", "industrial vibe", "demo day") in the same query.
 
@@ -40,7 +40,7 @@ Layer 3 - Match explanation: Groq (Llama 3.3 70B) generates a one-sentence expla
 
 Docker Compose is included and fully configured. During local development I ran into a disk space issue on the system C drive (less than 1 GB free) that prevented Docker from building images. Moving the Docker WSL disk to the D drive hit a Windows WSL2 access restriction I could not resolve cleanly in the available time.
 
-Rather than spend time debugging the environment, I ran everything directly — PostgreSQL installed locally, Python virtualenv, uvicorn. The Docker Compose setup is complete and would work on a machine with sufficient disk space.
+Rather than spend time debugging the environment, I ran everything directly  PostgreSQL installed locally, Python virtualenv, uvicorn. The Docker Compose setup is complete and would work on a machine with sufficient disk space.
 
 ---
 
@@ -160,20 +160,20 @@ PostgreSQL native arrays allow clean filtering with the ANY operator without a j
 
 ## Known Limitations
 
-- No authentication — any client can create, update, or delete venues
+- No authentication - any client can create, update, or delete venues
 - Keyword scoring does not understand synonyms or semantic similarity
-- No persistent caching — resets on server restart
-- pgvector not installed — semantic search is not active in this version
+- No persistent caching - resets on server restart
+- pgvector not installed - semantic search is not active in this version
 - Tests require a running PostgreSQL instance
 
 ---
 
 ## What I Would Improve With 1-2 More Days
 
-1. pgvector semantic search — replace keyword scoring with vector embeddings
-2. Alembic migrations — proper migration history instead of create_all on startup
-3. JWT authentication — protect write endpoints, add admin-only access
-4. Better test coverage — integration tests with a test database
-5. AWS deployment — EC2 for the API, RDS for PostgreSQL, Route 53 for DNS
-6. Rate limiting — protect the search endpoint from abuse
-7. Lead notifications — webhook or email when a new lead comes in
+1. pgvector semantic search - replace keyword scoring with vector embeddings
+2. Alembic migrations - proper migration history instead of create_all on startup
+3. JWT authentication - protect write endpoints, add admin-only access
+4. Better test coverage - integration tests with a test database
+5. AWS deployment - EC2 for the API, RDS for PostgreSQL, Route 53 for DNS
+6. Rate limiting - protect the search endpoint from abuse
+7. Lead notifications - webhook or email when a new lead comes in
