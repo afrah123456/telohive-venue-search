@@ -18,7 +18,7 @@ The core challenge is handling both hard constraints (capacity, budget, city) an
 
 The service is a REST API built with FastAPI and PostgreSQL. Search runs in three layers:
 
-Layer 1 - Structured filtering: SQL WHERE clauses filter venues by hard constraints first — city, capacity, budget, venue type. A venue that does not meet capacity is never the right answer regardless of description quality.
+Layer 1 - Structured filtering: SQL WHERE clauses filter venues by hard constraints first city, capacity, budget, venue type. A venue that does not meet capacity is never the right answer regardless of description quality.
 
 Layer 2 - Keyword scoring: Each filtered venue is scored by how well its name, description, tags, and amenities match the query terms. Scores range from 0 to 1.
 
