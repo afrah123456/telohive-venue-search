@@ -1,0 +1,80 @@
+[
+  {
+    "name": "The Rooftop at Seaport",
+    "city": "Boston",
+    "address": "123 Seaport Blvd, Boston, MA",
+    "capacity_min": 50,
+    "capacity_max": 150,
+    "price_per_head": 85.0,
+    "description": "A stunning rooftop venue in Boston's Seaport district with panoramic harbor views. Perfect for startup mixers, networking events, and corporate gatherings.",
+    "tags": ["rooftop", "harbor view", "outdoor", "networking"],
+    "amenities": ["AV support", "bar", "catering", "wifi", "parking"],
+    "venue_type": "rooftop",
+    "attributes": {"outdoor": true, "view": "harbor"}
+  },
+  {
+    "name": "Cambridge Innovation Loft",
+    "city": "Cambridge",
+    "address": "456 Main St, Cambridge, MA",
+    "capacity_min": 20,
+    "capacity_max": 80,
+    "price_per_head": 110.0,
+    "description": "A modern industrial loft in Cambridge ideal for team dinners, demo days, and private dining experiences. Features exposed brick and high ceilings.",
+    "tags": ["industrial", "loft", "private dining", "demo day"],
+    "amenities": ["AV support", "catering", "wifi", "whiteboard"],
+    "venue_type": "loft",
+    "attributes": {"style": "industrial", "private": true}
+  },
+  {
+    "name": "The Garden Terrace",
+    "city": "Boston",
+    "address": "789 Commonwealth Ave, Boston, MA",
+    "capacity_min": 30,
+    "capacity_max": 100,
+    "price_per_head": 95.0,
+    "description": "An elegant garden terrace venue in Boston perfect for team celebrations, product launches, and intimate corporate events.",
+    "tags": ["garden", "terrace", "outdoor", "elegant"],
+    "amenities": ["catering", "bar", "wifi", "parking", "stage"],
+    "venue_type": "terrace",
+    "attributes": {"outdoor": true, "style": "elegant"}
+  },
+  {
+    "name": "Downtown Conference Center",
+    "city": "Boston",
+    "address": "321 Federal St, Boston, MA",
+    "capacity_min": 100,
+    "capacity_max": 500,
+    "price_per_head": 60.0,
+    "description": "A large professional conference center in downtown Boston with state-of-the-art AV equipment. Ideal for large corporate events, conferences, and seminars.",
+    "tags": ["conference", "corporate", "large", "professional"],
+    "amenities": ["AV support", "wifi", "catering", "parking", "stage", "projector"],
+    "venue_type": "conference",
+    "attributes": {"indoor": true, "professional": true}
+  },
+  {
+    "name": "The Speakeasy Lounge",
+    "city": "Cambridge",
+    "address": "654 Harvard Ave, Cambridge, MA",
+    "capacity_min": 20,
+    "capacity_max": 60,
+    "price_per_head": 120.0,
+    "description": "An intimate speakeasy-style lounge in Cambridge perfect for private dinners, team celebrations, and exclusive gatherings under $120 per head.",
+    "tags": ["speakeasy", "intimate", "private", "lounge"],
+    "amenities": ["bar", "catering", "wifi", "private room"],
+    "venue_type": "lounge",
+    "attributes": {"style": "speakeasy", "private": true}
+  },
+  {
+    "name": "Kendall Square Maker Space",
+    "city": "Cambridge",
+    "address": "987 Kendall St, Cambridge, MA",
+    "capacity_min": 30,
+    "capacity_max": 120,
+    "price_per_head": 75.0,
+    "description": "An industrial-style maker space in Kendall Square with full AV support. Perfect for demo days, hackathons, and tech startup events.",
+    "tags": ["industrial", "maker space", "demo day", "hackathon", "tech"],
+    "amenities": ["AV support", "wifi", "projector", "whiteboard", "catering"],
+    "venue_type": "maker space",
+    "attributes": {"style": "industrial", "tech_friendly": true}
+  }
+]
